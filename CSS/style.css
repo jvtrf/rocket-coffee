@@ -41,7 +41,7 @@ header {
     -1px 1px 0 var(--button), 1px 1px 0 var(--button);
 }
 
-/* LINK DECORATION */
+/* LINK and BUTTON DECORATION */
 a {
   text-decoration: none;
   color: white;
@@ -55,6 +55,14 @@ a:hover {
   border-radius: 10%;
   padding: 10px 10px;
 }
+button {
+  position: absolute;
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index: 1;
+}
+/* LINK and BUTTON DECORATION */
 .background-image {
   position: absolute;
   z-index: -1;
@@ -73,4 +81,69 @@ a:hover {
   height: 100vh;
   top: 0;
   right: 0;
+}
+/* EXCLUSIVE IN MOBILE */
+.exmobile {
+  display: none;
+}
+
+@media only screen and (max-width: 1170px) {
+  header {
+    grid-template-columns: 50% 50%;
+  }
+  .nomobile {
+    display: none;
+  }
+  .exmobile {
+    display: block;
+  }
+  nav,
+  .link-cafe {
+    display: none;
+  }
+  #close-menu-button {
+    display: none;
+  }
+
+  #coffee {
+    max-width: 500px;
+  }
+  #blur-mobile {
+    align-self: center;
+    height: 100vh;
+    width: 100vw;
+    bottom: 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #main-text .logo {
+    font-size: 3.5rem;
+  }
+  #coffee {
+    max-width: 300px;
+  }
+}
+
+#dropdown {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  align-items: center;
+  background-color: #000;
+}
+#dropdown-nav {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#dropdown-nav a {
+  margin: auto 0;
 }

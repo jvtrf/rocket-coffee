@@ -12,6 +12,19 @@
 <body>
   <header>
     <img src="/assets/logo-desktop.svg">
+    <div class="exmobile">
+      <button onclick="openMenu()" id="open-menu-button"><img src="/assets/menu-buguer-open.svg"></button>
+      <button onclick="closeMenu()" id="close-menu-button"><img src="/assets/menu-buguer-close.svg"></button>
+      <div id="dropdown">
+        <nav id="dropdown-nav">
+          <a href="" class="nav-link">Home</a>
+          <a href="" class="nav-link">Menu</a>
+          <a href="" class="nav-link">Recompensas</a>
+          <a href="" class="nav-link">Gift Cards</a>
+          <a href="" class="nav-link">Lojas</a>
+        </nav>
+      </div>
+    </div>
     <nav>
       <a href="" class="nav-link">Home</a>
       <a href="" class="nav-link">Menu</a>
@@ -28,10 +41,12 @@
     </div>
     <div id="background-images">
       <img src="assets/rocket-coffee.png" class="background-image" id="coffee">
-      <img src="assets/blur-1.png" class="background-image" id="blur-1">
-      <img src="assets/blur-2.png" class="background-image" id="blur-2">
+      <img src="assets/blur-1.png" class="background-image nomobile" id="blur-1">
+      <img src="assets/blur-2.png" class="background-image nomobile" id="blur-2">
+      <img src="assets/blur-mobile.png" class="background-image exmobile" id="blur-mobile">
     </div>
   </main>
 </body>
+<script src="/JS/script.js"></script>
 
 </html>
